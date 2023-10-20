@@ -2,14 +2,14 @@
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
   <servers>
     <server>
-      <id>dhl-releases</id>
-      <username>dhluser</username>
-      <password>passvar</password>
+      <id>dhl3app-releases</id>
+      <username>dhl3user</username>
+      <password>dhl3user</password>
     </server>
     <server>
-      <id>dhl-snapshots</id>
-      <username>dhluser</username>
-      <password>passvar</password>
+      <id>dhl3app-snapshots</id>
+      <username>dhl3user</username>
+      <password>dhl3user</password>
     </server>
   </servers>
 
