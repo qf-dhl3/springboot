@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: dhlagentgroup
+  demands:
+   - agent.name -equals dhlagent
+
+
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=devsecopsapp  -Dsonar.host.url=http://13.59.208.70:9000  -Dsonar.login=squ_82f10a25688e31f592ddf5b60eb6d9bd9798f832 -Dsonar.projectName=devsecopsapp
+  displayName: 'Run a multi-line script'
